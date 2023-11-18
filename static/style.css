@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: 'Uni Sans', sans-serif;
+    background-color: #1f2a2e;
+    color: #a3bcb9;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #152524;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.sidebar:hover {
+    width: 22%;
+}
+
+.sidebar .server-name {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .server-name img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.sidebar .server-name img:hover {
+    transform: scale(1.1);
+}
+
+.sidebar .channel {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #4f545c;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sidebar .channel:hover {
+    background: #1e3835;
+}
+
+.content {
+    width: 80%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.content-header {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #4f545c;
+    margin-bottom: 0.5rem;
+}
+
+.content:hover {
+    width: 78%;
+}
+
+.messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    border-bottom: 1px solid #4f545c;
+    padding-bottom: 1rem;
+}
+
+.message-bar {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid #4f545c;
+}
+
+.message-bar input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    margin-right: 1rem;
+    background-color: #293736;
+    color: #a3bcb9;
+}
+
+.message-bar button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #66b38a;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.message-bar button:hover {
+    background-color: #539a73;
+}
+
+@keyframes spinOnce {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinOnce {
+    animation: spinOnce 1s linear;
+}

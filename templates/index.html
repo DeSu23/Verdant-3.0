@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Verdant 2.5</title>
+    <link rel="icon" href="/static/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Uni+Sans:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="server-name">
+                <img alt="server icon" src="/static/server_icon.png" />
+                Verdant's Server
+            </div>
+            <div class="channel"># general</div>
+            <div class="channel"># random</div>
+            <div class="channel"># music</div>
+            <div class="channel"># movies</div>
+            <div class="channel"># tech</div>
+        </div>
+        <div class="content">
+            <div class="content-header">
+                # Select a channel
+            </div>
+            <div class="messages">
+            </div>
+            <div class="message-bar">
+                <input placeholder="Type a message..." type="text" />
+                <button>Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
